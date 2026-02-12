@@ -58,7 +58,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
         
         <div className="space-y-8">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-[#F2F2F2]">What We Are</h2>
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-[#F2F2F2]">WHO WE ARE</h2>
           <p className="text-lg text-[#D8D8D8] leading-relaxed">
             Yaratıcılığın sezgisel tarafını, fikirlerin keskin taraflarını ve yapay zekânın sınırsız üretim gücünü tek bir merkezde topluyoruz.
             Burada fikirler yalnızca üretilmez—dönüştürülür, keskinleştirilir ve maksimum etkiyi yaratmak üzere tasarlanır.

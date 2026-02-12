@@ -26,9 +26,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <span className="neon-premium-pulse">Productivity</span> Begins.
           </h1>
           <p className="text-xl md:text-2xl text-[#D8D8D8] font-light max-w-2xl mb-12 leading-relaxed">
-            Alphamind markanızı anlatmanızın en verimli yoludur. Güçlü bir marka stratejisinin, 
-            hikayesi olan tasarımların, gündemi takip eden zengin içeriklerin ve etkili yapay
-            zeka kullanımının buluştuğu bir laboratuvardır.
+            Alphamind markanızı anlatmanızın en verimli yoludur.
+            Güçlü bir marka stratejisinin, hikayesi olan tasarımların,
+            gündemi takip eden zengin içeriklerin ve etkili yapay zeka
+            kullanımının buluştuğu bir laboratuvardır.
           </p>
           <button 
             onClick={() => onNavigate(Page.Contact)}

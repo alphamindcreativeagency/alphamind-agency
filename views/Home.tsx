@@ -69,31 +69,79 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Capabilities / Cards */}
-      <section className="space-y-16">
-        <h2 className="text-sm tracking-[0.4em] uppercase font-bold text-[#A8A8A8]">CAPABILITIES</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { title: "CREATIVE DIRECTION", icon: <Layers size={24} /> },
-            { title: "STRATEGY", icon: <Zap size={24} /> },
-            { title: "AI-DRIVEN CONTENT LAB", icon: <Cpu size={24} /> },
-            { title: "3D & MOTION", icon: <Activity size={24} /> },
-            { title: "CINEMATIC STORYTELLING", icon: <ArrowRight size={24} /> },
-            { title: "BRANDING ENGINEERING", icon: <Code size={24} /> }
-          ].map((item, idx) => (
-            <motion.div 
-              key={idx}
-              whileHover={{ y: -10, borderColor: '#FF2EB8' }}
-              className="p-10 bg-[#0A0A0A] border border-[#2B2B2B] rounded-sm transition-all duration-300"
-            >
-              <div className="text-[#FF2EB8] mb-6">{item.icon}</div>
-              <h3 className="text-xl font-bold uppercase mb-4 tracking-tight">{item.title}</h3>
-              <p className="text-[#A8A8A8] text-sm leading-relaxed">ENGINEERING PREMIUM EXPERIENCES THROUGH INTELLIGENCE AND AESTHETIC PRECISION.</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-    </div>
+      {/* Hizmetler / Cards */}
+<section className="space-y-16">
+  <h2 className="text-sm tracking-[0.4em] uppercase font-bold text-[#A8A8A8]">
+    HİZMETLER
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {[
+      {
+        title: "CREATIVE DIRECTION",
+        description:
+          "Markanızın tonunu, anlatım dilini ve görsel dünyasını tek bir güçlü fikir etrafında konumlandırırız.",
+        icon: <Layers size={24} />
+      },
+      {
+        title: "STRATEGY",
+        description:
+          "Hedef kitlenizi, pazarı ve iş hedeflerinizi analiz ederek ölçülebilir ve sonuç odaklı iletişim stratejileri oluştururuz.",
+        icon: <Zap size={24} />
+      },
+      {
+        title: "BRAND ENGINEERING",
+        description:
+          "Markanızın kimliğini, değerlerini ve konumlandırmasını sürdürülebilir bir sistem olarak tasarlar ve inşa ederiz.",
+        icon: <Code size={24} />
+      },
+      {
+        title: "AI-DRIVEN CONTENT LAB",
+        description:
+          "Yapay zekâ destekli üretim süreçleriyle hızlı, ölçeklenebilir ve yüksek etki yaratan içerikler geliştiririz.",
+        icon: <Cpu size={24} />
+      },
+      {
+        title: "INNOVATIVE DESIGN WORLD",
+        description:
+          "Güncel trendleri ve yaratıcı yaklaşımı birleştirerek markanızı farklılaştıran çağdaş tasarım çözümleri üretiriz.",
+        icon: <Activity size={24} />
+      },
+      {
+        title: "CINEMATIC STORYTELLING",
+        description:
+          "Hikâyenizi sinematografik anlatım gücüyle duygusal ve akılda kalıcı görsel deneyimlere dönüştürürüz.",
+        icon: <ArrowRight size={24} />
+      },
+      {
+        title: "DIGITAL CAMPAIGNS & SOCIAL MEDIA CRAFTING",
+        description:
+          "Dijital mecralarda görünürlüğü ve etkileşimi artıran, stratejik ve yaratıcı kampanyalar tasarlayıp yönetiriz.",
+        icon: <Zap size={24} />
+      },
+      {
+        title: "BASILI VE ÖZEL TASARIM İŞLER",
+        description:
+          "Fiziksel temas noktalarında markanızı güçlendiren, özgün ve yüksek kaliteli basılı materyaller tasarlarız.",
+        icon: <Layers size={24} />
+      }
+    ].map((item, idx) => (
+      <motion.div
+        key={idx}
+        whileHover={{ y: -10, borderColor: "#FF2EB8" }}
+        className="p-10 bg-[#0A0A0A] border border-[#2B2B2B] rounded-sm transition-all duration-300"
+      >
+        <div className="text-[#FF2EB8] mb-6">{item.icon}</div>
+        <h3 className="text-xl font-bold uppercase mb-4 tracking-tight">
+          {item.title}
+        </h3>
+        <p className="text-[#A8A8A8] text-sm leading-relaxed">
+          {item.description}
+        </p>
+      </motion.div>
+    ))}
+  </div>
+</section>
   );
 };
 

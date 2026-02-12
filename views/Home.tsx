@@ -19,15 +19,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
         >
           <span className="inline-block px-3 py-1 bg-[#2B2B2B] text-[#FF2EB8] text-[10px] tracking-[0.3em] font-bold uppercase mb-8 border border-[#FF2EB8]/20">
-            INTELLIGENCE HUB
+            CREATIVE INTELLIGENCE HUB
           </span>
           <h1 className="text-5xl md:text-8xl font-bold leading-[1.1] tracking-tighter mb-8 max-w-5xl text-[#F2F2F2]">
-            Where Chaos Ends and<br />
-            <span className="neon-premium-pulse">Creative Intelligence</span> Begins.
+            Where the Chaos Ends<br />
+            <span className="neon-premium-pulse">Productivity</span> Begins.
           </h1>
           <p className="text-xl md:text-2xl text-[#D8D8D8] font-light max-w-2xl mb-12 leading-relaxed">
-            Alphamind, markaların karanlıkta kaybolduğu anda yolu aydınlatan neon bir laboratuvardır. 
-            Strateji, yaratıcılık ve yapay zekâyı tek bir akışta birleştirerek markalara yeni bir ritim kazandırır.
+            Alphamind markanızı anlatmanızın en verimli yoludur. Güçlü bir marka stratejisinin, 
+            hikayesi olan tasarımların, gündemi takip eden zengin içeriklerin ve etkili yapay
+            zeka kullanımının buluştuğu bir laboratuvardır.
           </p>
           <button 
             onClick={() => onNavigate(Page.Contact)}

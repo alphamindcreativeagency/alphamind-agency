@@ -42,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </motion.div>
       </section>
 
-      {/* What We Are Section */}
+      {/* WHO WE ARE */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div className="relative">
           <div className="aspect-square bg-[#1A1A1A] rounded-sm overflow-hidden border border-[#2B2B2B] group">
@@ -60,8 +60,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="space-y-8">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-[#F2F2F2]">What We Are</h2>
           <p className="text-lg text-[#D8D8D8] leading-relaxed">
-            Yaratıcılığın sezgisel tarafını, verinin keskin noktasını ve yapay zekânın sınırsız üretim gücünü tek bir merkezde topluyoruz. 
-            Burada fikirler yalnızca üretilmez—dönüştürülür, keskinleştirilir ve etki yaratmak üzere tasarlanır.
+            Yaratıcılığın sezgisel tarafını, fikirlerin keskin taraflarını ve yapay zekânın sınırsız üretim gücünü tek bir merkezde topluyoruz.
+            Burada fikirler yalnızca üretilmez—dönüştürülür, keskinleştirilir ve maksimum etkiyi yaratmak üzere tasarlanır.
           </p>
           <blockquote className="border-l-2 border-[#FF2EB8] pl-8 py-2">
              <p className="text-xl italic font-light text-[#A8A8A8]">"Yaratıcılık kaosa teslim olursa, düzeni biz kurarız."</p>

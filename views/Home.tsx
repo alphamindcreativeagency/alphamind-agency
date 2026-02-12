@@ -25,7 +25,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             Where the Chaos Ends<br />
             <span className="neon-premium-pulse">Productivity</span> Begins.
           </h1>
-          <p className="text-xl md:text-2xl text-[#D8D8D8] font-light max-w-4xl mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#D8D8D8] font-light mb-12 leading-[1.6]">
             Alphamind markanızı anlatmanızın en verimli yoludur.
             Güçlü bir marka stratejisinin, hikayesi olan tasarımların,
             gündemi takip eden zengin içeriklerin ve etkili yapay zeka

@@ -4,10 +4,8 @@ export enum Page {
   About = 'Hakkımızda',
   Services = 'Hizmetler',
   Process = 'Süreç',
-  Projects = 'Projeler',
-  Clients = 'Müşteriler',
   Contact = 'İletişim',
-  Manifesto = 'MANIFESTO'
+  Manifesto = 'MANİFESTO'
 }
 
 export interface Project {

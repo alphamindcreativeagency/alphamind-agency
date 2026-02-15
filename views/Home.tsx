@@ -48,11 +48,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div className="relative">
           <div className="aspect-square bg-[#1A1A1A] rounded-sm overflow-hidden border border-[#2B2B2B]">
-            <img
-              src="https://picsum.photos/seed/cyber1/1000/1000"
-              alt="Cyber Lab"
-              className="w-full h-full object-cover opacity-50"
-            />
+            <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700"
+>
+  <source src="/video/lab.mp4" type="video/mp4" />
+</video>
           </div>
         </div>
 

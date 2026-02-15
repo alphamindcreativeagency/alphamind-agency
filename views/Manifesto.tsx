@@ -67,7 +67,7 @@ const Manifesto: React.FC = () => {
           transition={{ delay: 3 }}
           className="mt-20 pt-12 border-t border-[#2B2B2B] text-[#FF2EB8] font-mono text-sm tracking-[0.5em]"
         >
-          ALPHAMIND ONLINE.
+          ALPHAMIND, online.
         </motion.div>
       </motion.div>
     </div>

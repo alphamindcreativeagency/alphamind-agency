@@ -23,9 +23,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           </span>
 
           <h1 className="text-5xl md:text-8xl font-bold leading-[1.1] tracking-tighter mb-8 max-w-5xl text-[#F2F2F2]">
-            Where the Chaos Ends <br />
-            <span className="neon-premium-pulse">Productivity</span> Begins.
-          </h1>
+  Where the Chaos Ends<br />
+  And <span className="neon-premium-pulse">Productivity</span> Begins.
+</h1>
 
           <p className="text-xl md:text-2xl text-[#D8D8D8] font-light max-w-4xl mb-12 leading-[1.6]">
             Alphamind markanızı anlatmanızın en verimli yoludur. Güçlü bir marka
@@ -53,7 +53,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   loop
   muted
   playsInline
-  className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700"
+className="w-full h-full object-cover opacity-60 transition-all duration-700"
 >
   <source src="/video/lab.mp4" type="video/mp4" />
 </video>
@@ -62,14 +62,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
         <div className="space-y-8">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-[#F2F2F2]">
-            WHO WE ARE
-          </h2>
-          <p className="text-lg text-[#D8D8D8] leading-relaxed">
-            Yaratıcılığın sezgisel tarafını, fikirlerin keskin taraflarını ve
-            yapay zekânın sınırsız üretim gücünü tek bir merkezde topluyoruz.
-            Burada fikirler yalnızca üretilmez—dönüştürülür, keskinleştirilir ve
-            maksimum etkiyi yaratmak üzere tasarlanır.
-          </p>
+  BİZ KİMİZ?
+</h2>
+
+<p className="text-lg text-[#D8D8D8] leading-relaxed">
+  Yaratıcılığın sezgisel tarafını, fikirlerin keskin taraflarını ve yapay zekânın sınırsız üretim gücünü tek bir merkezde topluyoruz.
+  Burada fikirler yalnızca üretilmez—dönüştürülür, keskinleştirilir ve maksimum etkiyi yaratmak üzere tasarlanır.
+</p>
+
 
           <blockquote className="border-l-2 border-[#FF2EB8] pl-8 py-2">
             <p className="text-xl italic font-light text-[#A8A8A8]">
@@ -86,74 +86,71 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   </h2>
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {[
-      {
-        title: "CREATIVE DIRECTION",
-        description:
-          "Markanızın tonunu, anlatım dilini ve görsel dünyasını tek bir güçlü fikir etrafında konumlandırırız.",
-        icon: <Layers size={24} />
-      },
-      {
-        title: "STRATEGY",
-        description:
-          "Hedef kitlenizi, pazarı ve iş hedeflerinizi analiz ederek ölçülebilir ve sonuç odaklı iletişim stratejileri oluştururuz.",
-        icon: <Zap size={24} />
-      },
-      {
-        title: "BRAND ENGINEERING",
-        description:
-          "Markanızın kimliğini, değerlerini ve konumlandırmasını sürdürülebilir bir sistem olarak tasarlar ve inşa ederiz.",
-        icon: <Code size={24} />
-      },
-      {
-        title: "AI-DRIVEN CONTENT LAB",
-        description:
-          "Yapay zekâ destekli üretim süreçleriyle hızlı, ölçeklenebilir ve yüksek etki yaratan içerikler geliştiririz.",
-        icon: <Cpu size={24} />
-      },
-      {
-        title: "INNOVATIVE DESIGN WORLD",
-        description:
-          "Güncel trendleri ve yaratıcı yaklaşımı birleştirerek markanızı farklılaştıran çağdaş tasarım çözümleri üretiriz.",
-        icon: <Activity size={24} />
-      },
-      {
-        title: "CINEMATIC STORYTELLING",
-        description:
-          "Hikâyenizi sinematografik anlatım gücüyle duygusal ve akılda kalıcı görsel deneyimlere dönüştürürüz.",
-        icon: <ArrowRight size={24} />
-      },
-      {
-        title: "DIGITAL CAMPAIGNS & SOCIAL MEDIA CRAFTING",
-        description:
-          "Dijital mecralarda görünürlüğü ve etkileşimi artıran, stratejik ve yaratıcı kampanyalar tasarlayıp yönetiriz.",
-        icon: <Zap size={24} />
-      },
-      {
-        title: "BASILI VE ÖZEL TASARIM İŞLER",
-        description:
-          "Fiziksel temas noktalarında markanızı güçlendiren, özgün ve yüksek kaliteli basılı materyaller tasarlarız.",
-        icon: <Layers size={24} />
-      }
-    ].map((item, idx) => (
-      <motion.div
-        key={idx}
-        whileHover={{ y: -10, borderColor: "#FF2EB8" }}
-        className="p-10 bg-[#0A0A0A] border border-[#2B2B2B] rounded-sm transition-all duration-300"
-      >
-        <div className="text-[#FF2EB8] mb-6">{item.icon}</div>
-        <h3 className="text-xl font-bold uppercase mb-4 tracking-tight text-white">
-          {item.title}
-        </h3>
-        <p className="text-[#A8A8A8] text-sm leading-relaxed">
-          {item.description}
-        </p>
-      </motion.div>
-    ))}
-  </div>
-</section>
-
-    </div>
+  {[
+    {
+      title: "KREATİF YÖNETİM",
+      description:
+        "Markanızın tonunu, anlatım dilini ve görsel dünyasını tek bir güçlü fikir etrafında konumlandırırız.",
+      icon: <Layers size={24} />
+    },
+    {
+      title: "STRATEJİ",
+      description:
+        "Hedef kitlenizi, pazarı ve iş hedeflerinizi analiz ederek ölçülebilir ve sonuç odaklı iletişim stratejileri oluştururuz.",
+      icon: <Zap size={24} />
+    },
+    {
+      title: "MARKA İNŞASI",
+      description:
+        "Markanızın kimliğini, değerlerini ve konumlandırmasını sürdürülebilir bir sistem olarak tasarlar ve inşa ederiz.",
+      icon: <Code size={24} />
+    },
+    {
+      title: "AI İÇERİK LABORATUVARI",
+      description:
+        "Yapay zekâ destekli üretim süreçleriyle hızlı, ölçeklenebilir ve yüksek etki yaratan içerikler geliştiririz.",
+      icon: <Cpu size={24} />
+    },
+    {
+      title: "YENİLİKÇİ TASARIM DİLİ",
+      description:
+        "Güncel trendleri ve yaratıcı yaklaşımı birleştirerek markanızı farklılaştıran çağdaş tasarım çözümleri üretiriz.",
+      icon: <Activity size={24} />
+    },
+    {
+      title: "SİNEMATİK HİKAYE ANLATIMI",
+      description:
+        "Hikâyenizi sinematografik anlatım gücüyle duygusal ve akılda kalıcı görsel deneyimlere dönüştürürüz.",
+      icon: <ArrowRight size={24} />
+    },
+    {
+      title: "DİJİTAL KAMPANYA & SOSYAL MEDYA YÖNETİMİ",
+      description:
+        "Dijital mecralarda görünürlüğü ve etkileşimi artıran, stratejik ve yaratıcı kampanyalar tasarlayıp yönetiriz.",
+      icon: <Zap size={24} />
+    },
+    {
+      title: "BASILI VE ÖZEL TASARIM İŞLER",
+      description:
+        "Fiziksel temas noktalarında markanızı güçlendiren, özgün ve yüksek kaliteli basılı materyaller tasarlarız.",
+      icon: <Layers size={24} />
+    }
+  ].map((item, idx) => (
+    <motion.div
+      key={idx}
+      whileHover={{ y: -10, borderColor: "#FF2EB8" }}
+      className="p-10 bg-[#0A0A0A] border border-[#2B2B2B] rounded-sm transition-all duration-300"
+    >
+      <div className="text-[#FF2EB8] mb-6">{item.icon}</div>
+      <h3 className="text-xl font-bold uppercase mb-4 tracking-tight text-white">
+        {item.title}
+      </h3>
+      <p className="text-[#A8A8A8] text-sm leading-relaxed">
+        {item.description}
+      </p>
+    </motion.div>
+  ))}
+</div>
   );
 };
 

@@ -75,7 +75,7 @@ const App: React.FC = () => {
           onClick={() => setCurrentPage(Page.Home)}
           whileHover={{ scale: 1.05 }}
         >
-          ALPHAMIND.
+          ALPHAMIND
         </motion.div>
 
         <div className="hidden md:flex space-x-8">

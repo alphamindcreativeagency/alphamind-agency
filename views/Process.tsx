@@ -12,11 +12,15 @@ const steps = [
 
 const Process: React.FC = () => {
   return (
-    <div className="space-y-24">
-      <section>
-        <span className="text-[#FF2EB8] text-xs font-bold uppercase tracking-[0.3em] mb-4 block">THE ALPHAMIND METHOD</span>
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">İŞ AKIŞINDNA 5D’NİN GÜCÜ</h1>
-      </section>
+   <div className="space-y-24">
+  <section>
+    <span className="text-[#FF2EB8] text-xs font-bold uppercase tracking-[0.3em] mb-4 block">
+      THE ALPHAMIND METHOD
+    </span>
+    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">
+      5 DIMENSIONAL WORKFLOW
+    </h1>
+  </section>
 
       <div className="border-t border-[#2B2B2B]/50">
         {steps.map((item, idx) => (

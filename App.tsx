@@ -7,6 +7,7 @@ import { Page } from './types';
 import Home from './views/Home';
 import About from './views/About';
 import Services from './views/Services';
+import Works from './views/Works';
 import Process from './views/Process';
 import Manifesto from './views/Manifesto';
 import Contact from './views/Contact';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       case Page.Home: return <Home onNavigate={setCurrentPage} />;
       case Page.About: return <About />;
       case Page.Services: return <Services />;
+      case Page.Works: return <Works />;
       case Page.Process: return <Process />;
       case Page.Manifesto: return <Manifesto />;
       case Page.Contact: return <Contact />;

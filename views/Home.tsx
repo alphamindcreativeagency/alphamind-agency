@@ -51,15 +51,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div className="relative">
           <div className="aspect-square bg-[#1A1A1A] rounded-sm overflow-hidden border border-[#2B2B2B]">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover opacity-60 transition-all duration-700"
-            >
-              <source src="/video/lab.mp4" type="video/mp4" />
-            </video>
+           <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-full object-cover rounded-[32px]"
+>
+  <source src="/videos/ai-abstract.mp4" type="video/mp4" />
+</video>
           </div>
         </div>
 

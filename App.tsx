@@ -1,158 +1,112 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { BrowserRouter, Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-// Pages
-import Home from './views/Home';
-import About from './views/About';
 import Services from './views/Services';
 import Works from './views/Works';
 import Process from './views/Process';
-import Manifesto from './views/Manifesto';
 import Contact from './views/Contact';
 
-const navItems = [
-  { label: 'HOME', path: '/' },
-  { label: 'HAKKIMIZDA', path: '/about' },
-  { label: 'HİZMETLER', path: '/services' },
-  { label: 'WORK', path: '/work' },
-  { label: 'PROCESS', path: '/process' },
-  { label: 'MANIFESTO', path: '/manifesto' },
-  { label: 'CONTACT', path: '/contact' },
-];
-
-const AnimatedRoutes: React.FC = () => {
-  const location = useLocation();
-
-  return (
-    <main className="relative z-10 pt-24 pb-12 px-8 max-w-7xl mx-auto">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={location.pathname}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/work" element={<Works />} />
-            <Route path="/process" element={<Process />} />
-            <Route path="/manifesto" element={<Manifesto />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </motion.div>
-      </AnimatePresence>
-    </main>
-  );
-};
-
 const AppContent: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
-    <div className="relative min-h-screen bg-black text-[#F2F2F2] selection:bg-[#FF2EB8] selection:text-black">
-
-      <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-sm bg-black/20">
-        <motion.div whileHover={{ scale: 1.05 }}>
-          <Link
-            to="/"
-            className="text-[#FF2EB8] font-bold text-xl tracking-tighter cursor-pointer neon-flicker"
-          >
-            ALPHAMIND
-          </Link>
-        </motion.div>
-
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) =>
-                `text-xs uppercase tracking-widest transition-all duration-300 hover:text-[#FF2EB8] ${
-                  isActive
-                    ? 'text-[#FF2EB8] border-b border-[#FF2EB8]'
-                    : 'text-[#A8A8A8]'
-                }`
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </div>
-
-        <button
-          className="md:hidden text-[#F2F2F2]"
-          onClick={() => setIsMenuOpen(true)}
+    <div className="relative min-h-screen bg-black text-[#F2F2F2] overflow-x-hidden">
+      <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-8 py-5 flex justify-between items-center backdrop-blur-md bg-black/20">
+        <a
+          href="#home"
+          className="text-[#FF2EB8] font-bold text-sm md:text-xl tracking-tighter"
         >
-          <Menu size={24} />
-        </button>
+          ALPHAMIND
+        </a>
+
+        <a
+          href="#contact"
+          className="text-xs uppercase tracking-widest text-[#A8A8A8] hover:text-[#FF2EB8] transition-colors"
+        >
+          Start Project
+        </a>
       </nav>
 
-      <AnimatePresence>
-        {isMenuOpen && (
+      <main>
+        {/* HERO */}
+        <section
+          id="home"
+          className="min-h-screen flex items-center justify-center text-center px-6"
+        >
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ duration: 0.5 }}
-            className="fixed inset-0 bg-black z-[60] p-12 flex flex-col justify-center"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto"
           >
-            <button
-              className="absolute top-8 right-8 text-[#FF2EB8]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <X size={32} />
-            </button>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#FF2EB8]/10 blur-[140px] rounded-full pointer-events-none" />
 
-            <div className="space-y-8">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block text-4xl font-bold hover:text-[#FF2EB8] transition-colors uppercase italic"
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </div>
+            <p className="text-[#FF2EB8] text-sm tracking-[0.18em] mb-8 relative">
+              Creative Intelligence Hub
+            </p>
+
+            <h1 className="relative text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter leading-[0.9]">
+              Let’s build your next{' '}
+              <span className="text-[#FF2EB8]">brand film.</span>
+            </h1>
+
+            <p className="relative mt-8 text-[#A8A8A8] text-lg md:text-2xl max-w-3xl mx-auto">
+              Creative direction, AI-powered production and cinematic storytelling
+              systems for modern brands.
+            </p>
+
+            <a
+              href="#contact"
+              className="inline-flex mt-12 bg-[#FF2EB8] text-black px-10 py-5 rounded-2xl font-black uppercase tracking-wider hover:scale-105 transition-transform"
+            >
+              Start a Project
+            </a>
           </motion.div>
-        )}
-      </AnimatePresence>
+        </section>
 
-      <AnimatedRoutes />
+        {/* SERVICES */}
+        <section
+          id="services"
+          className="max-w-7xl mx-auto px-6 md:px-8 py-20"
+        >
+          <Services />
+        </section>
 
-      <footer className="mt-24 py-12 px-8 border-t border-[#2B2B2B]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 text-[#A8A8A8] text-xs tracking-widest uppercase">
+        {/* WORKS */}
+        <section
+          id="work"
+          className="max-w-7xl mx-auto px-6 md:px-8 py-20"
+        >
+          <Works />
+        </section>
+
+        {/* PROCESS */}
+        <section
+          id="process"
+          className="max-w-7xl mx-auto px-6 md:px-8 py-20"
+        >
+          <Process />
+        </section>
+
+        {/* CONTACT */}
+        <section
+          id="contact"
+          className="max-w-7xl mx-auto px-6 md:px-8 py-20"
+        >
+          <Contact />
+        </section>
+      </main>
+
+      <footer className="border-t border-[#2B2B2B] py-10 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs tracking-widest text-[#A8A8A8] uppercase">
           <div>
-            &copy; {new Date().getFullYear()} ALPHAMIND AGENCY. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} ALPHAMIND AGENCY. ALL RIGHTS RESERVED.
           </div>
 
-          <div className="flex space-x-8">
-            <a
-              href="https://www.instagram.com/alphamindcreativeagency"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#FF2EB8] transition-colors"
-            >
-              INSTAGRAM
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/alphamind-creative-agency/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#FF2EB8] transition-colors"
-            >
-              LINKEDIN
-            </a>
+          <div className="flex gap-8">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
           </div>
 
-          <div className="text-[#FF2EB8] font-bold normal-case">
+          <div className="text-[#FF2EB8] normal-case font-bold">
             ALPHAMIND, online.
           </div>
         </div>
@@ -162,50 +116,36 @@ const AppContent: React.FC = () => {
 };
 
 const App: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
+  if (loading) {
     return (
-      <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[100]">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1, 0.4, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-[#FF2EB8] text-4xl font-bold tracking-widest neon-text-pink"
-        >
+      <div className="fixed inset-0 bg-black flex flex-col items-center justify-center">
+        <div className="text-[#FF2EB8] text-4xl font-bold tracking-widest">
           ALPHAMIND
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="mt-8 w-48 h-1 bg-[#2B2B2B] overflow-hidden rounded-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
+        <div className="mt-8 w-48 h-1 bg-[#2B2B2B] rounded-full overflow-hidden">
           <motion.div
             className="h-full bg-[#FF2EB8]"
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
-            transition={{ duration: 2, ease: 'easeInOut' }}
+            transition={{ duration: 1 }}
           />
-        </motion.div>
-
-        <div className="mt-4 text-[#A8A8A8] text-xs tracking-widest uppercase">
-          INITIALIZING INTELLIGENCE LAB...
         </div>
       </div>
     );
   }
 
-  return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
-  );
+  return <AppContent />;
 };
 
 export default App;

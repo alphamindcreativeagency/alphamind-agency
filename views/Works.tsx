@@ -150,31 +150,6 @@ const Works: React.FC = () => {
           </motion.div>
         ))}
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="mt-32 text-center"
-      >
-        <h3 className="text-4xl md:text-6xl font-bold leading-tight">
-          Let’s build your next
-          <span className="text-[#FF2EB8]"> brand film.</span>
-        </h3>
-
-        <p className="mt-6 text-[#A8A8A8] max-w-2xl mx-auto text-lg">
-          Creative direction, AI-powered production and cinematic storytelling systems for modern brands.
-        </p>
-
-        <a
-          href="https://www.instagram.com/alphamindcreativeagency"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center mt-10 px-8 py-4 bg-[#FF2EB8] text-black font-bold rounded-2xl hover:scale-105 transition-transform duration-300"
-        >
-          START A PROJECT
-        </a>
-      </motion.div>
     </section>
   );
 };

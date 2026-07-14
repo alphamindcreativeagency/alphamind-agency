@@ -5,6 +5,7 @@ import Services from './views/Services';
 import Works from './views/Works';
 import Process from './views/Process';
 import Contact from './views/Contact';
+import Showroom from './views/Showroom';
 
 const AppContent: React.FC = () => {
   return (
@@ -118,6 +119,8 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
+  const isShowroomPage = window.location.pathname === '/showroom';
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -125,6 +128,10 @@ const App: React.FC = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  if (isShowroomPage) {
+    return <Showroom />;
+  }
 
   if (loading) {
     return (

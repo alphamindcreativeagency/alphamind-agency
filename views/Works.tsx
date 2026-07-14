@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 
 const works = [
   {
+    title: "Exotic - Yeri Ayrı Yaz Filmi",
+    category: "BEVERAGE / SUMMER BRAND FILM",
+    description:
+      "A vibrant AI-generated summer film for Exotic, built around joy, freshness, colorful seasonal moments and a playful beverage brand atmosphere.",
+    youtubeId: "YNqIE_Nl-S0",
+  },
+  {
     title: "Palmali Holding - Corporate Image Film",
     category: "CORPORATE / MARITIME IMAGE FILM",
     description:
@@ -17,7 +24,21 @@ const works = [
     youtubeId: "w7olvXDgkhs",
   },
   {
-    title: "Exotic - We Do Not Squeeze Concept Film",
+    title: "Daikin - Kombi Konsept Reklam Filmi",
+    category: "HOME COMFORT / CONCEPT FILM",
+    description:
+      "A fully AI-generated concept film built around winter atmosphere, home comfort, warmth and trust through a cinematic brand storytelling language.",
+    youtubeId: "vZfyvYca3F0",
+  },
+  {
+    title: "Arzum Okka - Babalar Günü Reklam Filmi",
+    category: "EMOTIONAL BRAND FILM",
+    description:
+      "A fully AI-generated Father's Day concept film shaped around family bonds, coffee rituals, warm home atmosphere and emotional brand storytelling.",
+    youtubeId: "BuerBd-CdBY",
+  },
+  {
+    title: "Exotic - Biz Sıkmayız Concept Film",
     category: "BEVERAGE / PRODUCT STORYTELLING",
     description:
       "A fresh and energetic AI-powered commercial concept for Exotic, reimagining natural fruit moments through a cinematic visual language.",
@@ -107,7 +128,7 @@ const Works: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-16">
         {works.map((work, index) => (
           <motion.div
-            key={index}
+            key={work.youtubeId}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.08, duration: 0.7 }}
@@ -118,14 +139,16 @@ const Works: React.FC = () => {
 
               <iframe
                 className="w-full h-full group-hover:scale-[1.03] transition-transform duration-700"
-                src={`https://www.youtube.com/embed/${work.youtubeId}`}
+                src={`https://www.youtube.com/embed/${work.youtubeId}?rel=0`}
                 title={work.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
+                loading="lazy"
               />
             </div>
 
             <div className="mt-7">
-              <div className="text-[#FF2EB8] text-xs tracking-[0.35em] mb-4">
+              <div className="text-[#FF2EB8] text-xs tracking-[0.35em] mb-4 uppercase">
                 {work.category}
               </div>
 

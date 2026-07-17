@@ -164,13 +164,25 @@ const Showroom: React.FC = () => {
               </button>
 
               <div className="aspect-video overflow-hidden rounded-[28px] border border-white/10 bg-black shadow-2xl shadow-[#FF2EB8]/20">
-                <iframe
-                  className="w-full h-full"
-                  src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0`}
-                  title="Alphamind Showroom Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
+              <div className="aspect-video overflow-hidden rounded-[28px] border border-white/10 bg-black shadow-2xl shadow-[#FF2EB8]/20">
+  <iframe
+    className="w-full h-full"
+    src={`https://www.youtube-nocookie.com/embed/${activeVideo}?rel=0&modestbranding=1&playsinline=1`}
+    title="Alphamind Showroom Video"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+</div>
+
+<a
+  href={`https://www.youtube.com/watch?v=${activeVideo}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-flex text-xs tracking-[0.25em] text-white/60 hover:text-[#FF2EB8] transition-colors"
+>
+  OPEN ON YOUTUBE →
+</a>
+
               </div>
             </motion.div>
           </motion.div>

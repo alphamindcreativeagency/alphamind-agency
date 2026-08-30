@@ -3,6 +3,20 @@ import { motion } from 'framer-motion';
 
 const works = [
   {
+    title: "Zeymarine - 30 Ağustos Zafer Bayramımız Kutlu Olsun!",
+    category: "CORPORATE / COMMEMORATIVE FILM",
+    description:
+      "A cinematic commemorative film for Zeymarine, honoring the spirit, courage and collective pride of Türkiye's 30 August Victory Day.",
+    youtubeId: "-DNZ2W8wLDY",
+  },
+  {
+    title: "Key Logistics - Just Ahead Of The Curve",
+    category: "LOGISTICS / CORPORATE FILM",
+    description:
+      "A cinematic corporate film for Key Logistics, built around motion, timing, operational precision and the visual language of logistics.",
+    youtubeId: "OYyUekzn3wY",
+  },
+  {
     title: "Exotic - Yeri Ayrı Yaz Filmi",
     category: "BEVERAGE / SUMMER BRAND FILM",
     description:

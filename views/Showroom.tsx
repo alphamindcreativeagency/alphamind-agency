@@ -9,6 +9,14 @@ type Work = {
 
 const works: Work[] = [
   {
+    title: "Zeymarine - 30 Ağustos Zafer Bayramımız Kutlu Olsun!",
+    youtubeId: "-DNZ2W8wLDY",
+  },
+  {
+    title: "Key Logistics - Just Ahead Of The Curve",
+    youtubeId: "OYyUekzn3wY",
+  },
+  {
     title: "Exotic - Yeri Ayrı Yaz Filmi",
     youtubeId: "YNqIE_Nl-S0",
   },
